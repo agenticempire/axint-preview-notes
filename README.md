@@ -1,16 +1,17 @@
-# Axint Preview Notes
+# Orbit
 
-A small SwiftUI iOS app built to test Axint Cloud Preview with a real native interface.
+A premium SwiftUI iOS sample app built to make Axint Cloud Preview feel like a real Apple execution layer, not a toy notes demo.
 
-It gives Cloud Preview a real app to build, launch, tap, type into, and verify:
+Orbit gives Cloud Preview a polished app to build, launch, stream, tap, type into, record, and verify:
 
-- Three tabs: Today, Notes, Compose
-- Buttons that mutate visible state
-- Text input and save flow
+- Four tabs: Overview, Itinerary, Plan, Studio
+- Animated hero map, route cards, metrics, and status pills
+- A real form with text entry, segmented pickers, save flow, and visible state updates
 - Local persistence through `UserDefaults`
+- Safe AI walkthrough controls, artifacts, and a deliberate blocked state for repair packets
 - Accessibility identifiers for automation
 
-![Preview Notes running in the iPhone simulator](Screenshots/preview-notes-today.png)
+![Orbit running in the iPhone simulator](Screenshots/orbit-overview.png)
 
 ## Build Locally
 
@@ -26,7 +27,7 @@ xcodebuild \
 
 Use these when creating a Cloud Preview room:
 
-- App name: `Axint Preview Notes`
+- App name: `Orbit`
 - Scheme: `AxintPreviewNotes`
 - Branch: `main`
 - Simulator: `iPhone 17 Pro`
@@ -34,25 +35,31 @@ Use these when creating a Cloud Preview room:
 ## What To Test
 
 1. Open the app.
-2. Tap the `Compose` tab.
-3. Type a title and body.
-4. Tap `Save Note`.
-5. Switch to `Today` or `Notes` and confirm the new note appears.
+2. Tap the `Plan` tab.
+3. Tap `Fill premium draft`.
+4. Tap `Save stop`.
+5. Switch to `Itinerary` and confirm the new stop appears.
+6. Tap `Studio` and confirm the safe AI walkthrough controls and artifacts panel are available.
 
 ## Automation Targets
 
 Useful accessibility identifiers:
 
-- `tab.today`
-- `tab.notes`
-- `tab.compose`
-- `button.add-demo-note`
+- `button.add-showcase-stop`
 - `button.reset-demo`
-- `field.note-title`
-- `field.note-body`
-- `picker.note-category`
-- `button.save-note`
+- `button.reset-showcase-data`
+- `field.stop-title`
+- `field.stop-location`
+- `field.stop-detail`
+- `picker.stop-category`
+- `picker.stop-status`
+- `button.fill-demo-draft`
+- `button.save-stop`
 - `text.saved-message`
+- `toggle.agent-walkthrough`
+- `toggle.focus-mode`
+- `picker.region`
+- `panel.artifacts`
 
 ## Proof From This Repo
 

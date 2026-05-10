@@ -1,13 +1,14 @@
 import SwiftUI
 
 @main
-struct PreviewNotesApp: App {
-    @StateObject private var store = NoteStore()
+struct OrbitApp: App {
+    @StateObject private var store = OrbitStore()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(store)
+                .preferredColorScheme(.dark)
         }
     }
 }
